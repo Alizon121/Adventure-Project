@@ -1,9 +1,14 @@
-class Item {
-  // Item Class: Item should have name and description attributes
+const Food = require("./food");
 
-  // Your code here 
+class Item {
+  constructor(name, description) {
+this.name = name
+this.description = description
+
+  }
 }
 
-module.exports = {
-  Item
-};
+const item = new Item("rock", "just a simple rock");
+console.log(item instanceof Item)
+// console.log(item instanceof Food) // -> does not work
+module.exports = Item

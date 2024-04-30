@@ -43,7 +43,7 @@ class Room {
 
   getItemByName(name) {
     // Retrieves an item from a room by item name
-    // Your code here 
+    console.log(`${name} can be retrieved from a room by name`)
   }
 }
 

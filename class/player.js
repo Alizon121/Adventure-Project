@@ -32,25 +32,30 @@ class Player {
 
   takeItem(itemName) {
     // Picks up an item from the current room into the player's inventory
-    // Your code here 
+    let item = this.currentRoom.getItemByName(itemName)
+    this.items.push(item);
+    console.log(`${itemName} can be picked up from a room by a player`)
   }
 
   dropItem(itemName) {
     // Drops an item the player is holding into their current room
-    // Your code here 
+   
   }
 
   eatItem(itemName) {
     // Allow the player to eat food items, but not non-food items
-    // Your code here 
+    if (itemName instanceof Food && itemName instanceof Item) {
+      console.log(`${itemName} can be eaten by a player`)
+  }
   }
 
   getItemByName(name) {
     // Retrieves an item from a player's inventory by item name
-
-    // Your code here 
+    
+    console.log(`${name} can be retrieved from player inventory by name`)
   }
 }
+
 
 module.exports = {
   Player
